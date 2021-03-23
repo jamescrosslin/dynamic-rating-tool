@@ -1,19 +1,20 @@
-import React from 'react';
-import StarRating from './StarRating';
+import React from "react";
+import StarRating from "./StarRating";
 
 const Course = (props) => {
+  const { url, name, desc } = props;
   return (
     <div className="card">
       <div>
-        <img src={props.url} alt={props.name} />
+        <img src={url} alt={name} />
       </div>
-      <h2>{ props.name }</h2>
-      <p>{ props.desc }</p>
+      <h2>{name}</h2>
+      <p>{desc}</p>
       <h3>Course Rating</h3>
       {/* A self-contained star rating component */}
-      <StarRating /> 
+      <StarRating />
     </div>
   );
-}
+};
 
 export default Course;
